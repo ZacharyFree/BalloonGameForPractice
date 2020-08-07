@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5609a1422cfbe224996a0b9b82551e98, type: 3}
+  m_Name: LeadBloonData
+  m_EditorClassIdentifier: 
+  bloonProperties: []
+  layers: 7
+  speedMultiplier: 0.5
+  actualSpeed: 0
+  color: {r: 0.01886791, g: 0.00080099585, b: 0.012314222, a: 1}
+  poppedBySharp: 0
+  poppedByBomb: 1

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653b1ea41fcb9c84cbd718c24fe58597, type: 3}
+  m_Name: Bloon Inventory
+  m_EditorClassIdentifier: 
+  bloonProperties:
+  - {fileID: 11400000, guid: 1b578b93f65430443aabacf9afd62f1c, type: 2}
+  - {fileID: 11400000, guid: 9d9534d03ffbe4b44be400868ea2766d, type: 2}
+  - {fileID: 11400000, guid: 9d68816dad777f149b230ff9e045f938, type: 2}
+  - {fileID: 11400000, guid: da2866e7c906a40408ccc4d46f3012b9, type: 2}
+  - {fileID: 11400000, guid: 586f342aac4c0964aa92e386808b8b70, type: 2}
+  - {fileID: 11400000, guid: a048b30db08528c47a25c242f0eeadfb, type: 2}
+  - {fileID: 11400000, guid: a048b30db08528c47a25c242f0eeadfb, type: 2}
