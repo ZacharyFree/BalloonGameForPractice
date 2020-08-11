@@ -8,7 +8,10 @@ public class PathFollow : MonoBehaviour
     private int wayPointIndex = 0;
     [HideInInspector] public float speed;
 
-
+    public int FarthestAlongWaypoint
+    {
+        get { return wayPointIndex; }
+    }
     private void Start()
     {
         //CODE FOR MOVING THE BALLOON

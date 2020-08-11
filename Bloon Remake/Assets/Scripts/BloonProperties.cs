@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName ="NewBloon", menuName = "NewBloon")]
-public class BloonProperties : BloonsInventoryData
+public class BloonProperties : ScriptableObject
 {
     public int layers = 1;
     //private float baseSpeed = 1f;

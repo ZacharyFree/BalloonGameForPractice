@@ -144,6 +144,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 2573397384492653825, guid: dc643e6115e96b04eb6b77e015958e10, type: 3}
   throwpoint: {fileID: 7045734910734761817}
+  clonePoint: {fileID: 1848519746537228827, guid: 48abbe024b765824cac87c0029d2e4ed,
+    type: 3}
   forgetDarts: {fileID: 3439557230692263341, guid: dc643e6115e96b04eb6b77e015958e10,
     type: 3}
   attackSpeed: 0

@@ -9,7 +9,7 @@ public class WeaponProperties : MonoBehaviour
     public Rigidbody2D dartBody;
     public float dartSpeed = 1f;
     private int lifeTimer;
-    private int layersAllowedToPop = 1;
+    public int layersAllowedToPop = 1;
     // Start is called before the first frame update
 
     private void Awake()

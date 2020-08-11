@@ -12,16 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33d5fef3dc516a647a1e118f47ac402a, type: 3}
   m_Name: Level 3
   m_EditorClassIdentifier: 
-  bloonProperties: []
-  layers: 1
-  speedMultiplier: 0
-  actualSpeed: 0
-  color: {r: 0, g: 0, b: 0, a: 0}
-  poppedBySharp: 0
-  poppedByBomb: 0
-  universalBloon: {fileID: 8038555592772049224, guid: 63306bcf7dd34f942ac283dfa6300279,
-    type: 3}
+  InventoryArray: {fileID: 11400000, guid: b1c2731b0f1b5eb4c8a24c157df3535a, type: 2}
   redBalloonsInThisLevel: 0
-  blueBalloonsInThisLevel: 0
+  bloonsSpawnedAlready: 10
+  blueBalloonsInThisLevel: 15
   greenBalloonsInThisLevel: 10
-  yellowBalloonsInThisLevel: 0
+  yellowBalloonsInThisLevel: 4
+  leadBalloonsInThisLevel: 1
+  timer: 1

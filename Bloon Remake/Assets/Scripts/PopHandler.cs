@@ -8,6 +8,9 @@ public class PopHandler : MonoBehaviour
 
 
     public BloonProperties bloonProperties;
+    private int thisBloonsLayers;
+
+
     public Collider2D fellowBloons;//used in collision to ignore balloons colliding with themselves
 
     //COUNT MONEY
@@ -15,11 +18,7 @@ public class PopHandler : MonoBehaviour
 
     private void Start()
     {
-        //PROPERTIES OF BALLOON FROM LEVELS SCRIPT CLASS
-        bloonProperties.layers = 1;
-
-        //IGNORE COLLISSIONS WITH OTHER BALLOONS
-        //Physics2D.IgnoreCollision(fellowBloons, fellowBloons);
+        thisBloonsLayers = bloonProperties.layers;
     }
 
     
@@ -28,7 +27,7 @@ public class PopHandler : MonoBehaviour
         if ((bloonProperties.poppedBySharp && collision.gameObject.CompareTag("sharp")) || (bloonProperties.poppedByBomb && collision.gameObject.CompareTag("bomb")))
         {
             Debug.Log(name);//I want to know how many trigger collisions are being detected
-            bloonProperties.layers--;
+            thisBloonsLayers--;
 
         }
     }
@@ -40,7 +39,7 @@ public class PopHandler : MonoBehaviour
 
     void Pop()
     {
-        if (bloonProperties.layers <= 0)
+        if (thisBloonsLayers <= 0)
         {
             Destroy(gameObject);
             AudioSource.PlayClipAtPoint(pop, transform.position, .5f);
