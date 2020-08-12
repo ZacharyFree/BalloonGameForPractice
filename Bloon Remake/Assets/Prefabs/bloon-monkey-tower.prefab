@@ -148,7 +148,7 @@ MonoBehaviour:
     type: 3}
   forgetDarts: {fileID: 3439557230692263341, guid: dc643e6115e96b04eb6b77e015958e10,
     type: 3}
-  attackSpeed: 0
+  attackSpeed: 1
   range: {fileID: 2981253908983475393}
   whoosh: {fileID: 8300000, guid: 982ebe6236d842b4db2fe746f0444a3f, type: 3}
   damageLayers: 1

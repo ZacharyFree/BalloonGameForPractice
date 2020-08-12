@@ -11,31 +11,25 @@ public class Money : MonoBehaviour
         // 3) Police the ability to purchase towers, and subtract money when purchase is complete
 
     private string moneyUIText;
-    private int availableMoney = 250;
-    public Button towerItemInCart;//this we want to set at runtime. will be set to the tower corresponding to the button we select from the menu
-    public MonkeyPowers monkeyMoneyStats;//we will pull a price from this script; when the location is selected, the tower will be placed, and money will be "spent"
-    private PopHandler popHandler;//from here we will learn how many pops. #pops = #dollars earned
-
+    //public Button towerItemInCart;//this we want to set at runtime. will be set to the tower corresponding to the button we select from the menu
+    //public MonkeyPowers monkeyMoneyStats;//we will pull a price from this script; when the location is selected, the tower will be placed, and money will be "spent"
     public Money()
     {
         //Default Constructor
 
     }
-    public int MoneyCounter
-    {
-        get{ return availableMoney; }
-        set{ availableMoney = value; }
-    }
+    public int MoneyCounter { get; set; } = 250;
+
     private void Start()
     {
-        moneyUIText = availableMoney.ToString();
+        moneyUIText = MoneyCounter.ToString();
         gameObject.GetComponent<Text>().text = moneyUIText;
 
     }
-
     private void Update()
     {
-        
-    }
+        moneyUIText = MoneyCounter.ToString();
+        gameObject.GetComponent<Text>().text = moneyUIText;
 
+    }
 }

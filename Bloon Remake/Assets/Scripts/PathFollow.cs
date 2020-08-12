@@ -7,6 +7,7 @@ public class PathFollow : MonoBehaviour
     private Transform target;
     private int wayPointIndex = 0;
     [HideInInspector] public float speed;
+    private GameObject livesText;
 
     public int FarthestAlongWaypoint
     {
@@ -14,6 +15,9 @@ public class PathFollow : MonoBehaviour
     }
     private void Start()
     {
+        //CODE FOR COUNTING DOWN LIVES
+        livesText = FindObjectOfType<Lives>().gameObject;
+
         //CODE FOR MOVING THE BALLOON
         target = WayPoints.wayPoints[0];
     }
@@ -36,6 +40,7 @@ public class PathFollow : MonoBehaviour
         if (wayPointIndex >= WayPoints.wayPoints.Length - 1)
         {
             Destroy(gameObject);
+            livesText.GetComponent<Lives>().LivesCounter--;
             return;//makes sure the Destroy method is complete before continuing with the code
         }
 

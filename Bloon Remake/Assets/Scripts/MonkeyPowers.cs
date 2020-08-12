@@ -7,7 +7,7 @@ public class MonkeyPowers : MonoBehaviour
     //Useful note: OnTriggerStay didn't work with monkey detection collider(as trigger) and balloon collider until balloons had rigidbodies
     public GameObject weapon;
     public GameObject throwpoint;
-    public GameObject clonePoint;//use to check children for farthest along balloon; this is the balloon to aim at
+    private GameObject clonePoint;//use to check children for farthest along balloon; this is the balloon to aim at
     //private PathFollow pathFollow;
     public Collider2D forgetDarts;
     [Tooltip("Default: once every 2 sec")]
@@ -21,24 +21,26 @@ public class MonkeyPowers : MonoBehaviour
 
     int[] allCurrentWayPoints;
 
+    private void Start()
+    {
+        clonePoint = FindObjectOfType<BloonCloner>().gameObject;
+    }
 
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log(timer);
         if (throwpoint.transform.childCount < 1)//ensures only 1 dart is thrown at a time
         {
             if (timer == 0)//ensures darts are thrown only once every few seconds
             {
-                //AimAtBalloon();
+                AimAtBalloon();
                 ChuckDartAtBalloon();
-                Debug.Log("Timer is at " + timer);
 
                 timer++;
             }
             else
             {
-                if (timer >= 60 * attackSpeed)
+                if (timer >= 120 / attackSpeed)
                 {
                     timer = 0;
                 }
@@ -75,7 +77,7 @@ public class MonkeyPowers : MonoBehaviour
             }*/
         }
 
-        GameObject firstBloonOnTrack = clonePoint.transform.GetChild(Mathf.Max(allCurrentWayPoints)-1).gameObject;
+        GameObject firstBloonOnTrack = clonePoint.transform.GetChild(0)/*Mathf.Max(allCurrentWayPoints)+1*/.gameObject;
         Vector3 firstBloonPosition = firstBloonOnTrack.transform.position;
         Vector3 offset = monkeyposition - firstBloonPosition;
         float angleToBalloon = Mathf.Atan2(offset.y, offset.x);
