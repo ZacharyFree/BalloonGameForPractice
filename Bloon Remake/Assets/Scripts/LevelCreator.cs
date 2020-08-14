@@ -87,7 +87,7 @@ public class LevelCreator : ScriptableObject
         }
         else
         {
-            if (timer >= framesToWait)
+            if (timer >= framesToWait * Time.deltaTime * 10000)
             {
                 timer = 0;
             }

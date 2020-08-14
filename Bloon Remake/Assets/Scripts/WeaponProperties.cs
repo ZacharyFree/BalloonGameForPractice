@@ -28,7 +28,7 @@ public class WeaponProperties : MonoBehaviour
     {
         //lifetime length check
         lifeTimer++;
-        if (lifeTimer > 120 || layersAllowedToPop <= 0)//if dart is over 2 seconds old or has popped all balloons it can, destroy it
+        if (lifeTimer > 240000 * Time.deltaTime/**helps maintain dart life across different computers*/ || layersAllowedToPop <= 0)//if dart is over 2 seconds old or has popped all balloons it can, destroy it
         {
             Destroy(gameObject);
         }

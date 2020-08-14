@@ -40,7 +40,7 @@ public class MonkeyPowers : MonoBehaviour
             }
             else
             {
-                if (timer >= 120 / attackSpeed)
+                if (timer >= 120 * Time.deltaTime / attackSpeed * 30)
                 {
                     timer = 0;
                 }
