@@ -6,6 +6,7 @@ using UnityEngine;
 public class LevelCreator : ScriptableObject
 {
     public ScriptableObject InventoryArray;
+    [Header("Number of Each Balloon")]
     [Range(0f,100f)]
     public int redBalloonsInThisLevel = 10;
     [HideInInspector] public int bloonsSpawnedAlready = 0;
@@ -17,6 +18,18 @@ public class LevelCreator : ScriptableObject
     public int yellowBalloonsInThisLevel = 10;
     [Range(0f, 100f)]
     public int leadBalloonsInThisLevel = 10;
+
+    [Header("Time before sending each balloon wave")]
+    [Tooltip("enter in seconds")]
+    public int timeBeforeRed;
+    public int timeBeforeBlue;
+    public int timeBeforeGreen;
+    public int timeBeforeYellow;
+    public int timeBeforeLead;
+    //private int timer2;
+
+
+
     [HideInInspector] public int timer;//only want access to set at 0 in Start function in BloonCloner
 
 
@@ -25,10 +38,10 @@ public class LevelCreator : ScriptableObject
     {
 
         //Red Balloons ================================================================================================
-        if (bloonsSpawnedAlready < redBalloonsInThisLevel)
-        {
-            SpawnBalloon(universalBloon, transform, Color.red , 1, 500, 0);
-        }
+            if (bloonsSpawnedAlready < redBalloonsInThisLevel)
+            {
+                SpawnBalloon(universalBloon, transform, Color.red, 1, 500, 0);
+            }
 
         //Blue Balloons ===============================================================================================
         if (bloonsSpawnedAlready < blueBalloonsInThisLevel)

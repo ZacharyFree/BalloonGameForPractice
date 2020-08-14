@@ -33,7 +33,7 @@ public class MonkeyPowers : MonoBehaviour
         {
             if (timer == 0)//ensures darts are thrown only once every few seconds
             {
-                AimAtBalloon();
+                //AimAtBalloon();
                 ChuckDartAtBalloon();
 
                 timer++;
@@ -61,7 +61,6 @@ public class MonkeyPowers : MonoBehaviour
 
     void AimAtBalloon()
     {
-        Vector3 monkeyposition = transform.position;
         allCurrentWayPoints = new int[clonePoint.transform.childCount];
         //find first balloon
         for (int i = 0; i < clonePoint.transform.childCount; i++)
@@ -77,11 +76,20 @@ public class MonkeyPowers : MonoBehaviour
             }*/
         }
 
-        GameObject firstBloonOnTrack = clonePoint.transform.GetChild(0)/*Mathf.Max(allCurrentWayPoints)+1*/.gameObject;
-        Vector3 firstBloonPosition = firstBloonOnTrack.transform.position;
-        Vector3 offset = monkeyposition - firstBloonPosition;
-        float angleToBalloon = Mathf.Atan2(offset.y, offset.x);
-        transform.Rotate(new Vector3(0, 0, 1), angleToBalloon);
+        Vector3 monkeyposition = transform.position;
+        if (clonePoint.transform.childCount > 0) 
+        {
+            GameObject firstBloonOnTrack = clonePoint.transform.GetChild(Mathf.Max(allCurrentWayPoints)).gameObject;
+            Vector3 firstBloonPosition = firstBloonOnTrack.transform.position;
+            Vector3 offset = monkeyposition - firstBloonPosition;
+            float angleToBalloon = Mathf.Atan2(offset.x, offset.y) * Mathf.Rad2Deg;
+            Debug.Log(angleToBalloon);
+            if (angleToBalloon > 5f)
+            {
+                transform.Rotate(0f, 0f, angleToBalloon);
+            }
+        }
+
         return;
 
     }
