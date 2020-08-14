@@ -10,6 +10,7 @@ public class BloonCloner : MonoBehaviour
     private void Start()
     {
         levelCreator.bloonsSpawnedAlready = 0;
+        levelCreator.timer = 0;
     }
 
     // Start is called before the first frame update

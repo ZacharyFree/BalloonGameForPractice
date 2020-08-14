@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5609a1422cfbe224996a0b9b82551e98, type: 3}
   m_Name: RedBloonData
   m_EditorClassIdentifier: 
-  bloonProperties: []
   layers: 1
   speedMultiplier: 1
   actualSpeed: 0
-  color: {r: 0.9716981, g: 0.03208439, b: 0.08884872, a: 1}
+  color: {r: 0.8584906, g: 0.044544328, b: 0.095415965, a: 1}
   poppedBySharp: 1
   poppedByBomb: 1
