@@ -6,6 +6,7 @@ using UnityEngine;
 public class LevelCreator : ScriptableObject
 {
     public GameObject universalBloon;
+    public BloonsInventoryData bloonStatsArray;
     [Range(10f,100f)]
     public int redBalloonsInThisLevel = 10;
     [HideInInspector] public int bloonsSpawnedAlready = 0;

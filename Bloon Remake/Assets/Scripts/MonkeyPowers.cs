@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class MonkeyPowers : MonoBehaviour
@@ -26,7 +27,7 @@ public class MonkeyPowers : MonoBehaviour
             if (timer == 0)
             {
                 ChuckDartAtBalloon();
-                //Debug.Log("Timer is at " + timer);
+                UnityEngine.Debug.Log("Timer is at " + timer);
 
                 timer++;
             }
@@ -35,6 +36,7 @@ public class MonkeyPowers : MonoBehaviour
                 if (timer == 60 * attackSpeed)
                 {
                     timer = 0;
+                    UnityEngine.Debug.Log("");
                 }
                 else
                 {

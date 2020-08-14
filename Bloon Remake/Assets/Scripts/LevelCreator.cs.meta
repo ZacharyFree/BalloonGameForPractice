@@ -4,8 +4,8 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - universalBloon: {fileID: 8038555592772049224, guid: 63306bcf7dd34f942ac283dfa6300279,
-      type: 3}
+  - universalBloon: {instanceID: 0}
+  - bloonStatsArray: {fileID: 11400000, guid: b1c2731b0f1b5eb4c8a24c157df3535a, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
